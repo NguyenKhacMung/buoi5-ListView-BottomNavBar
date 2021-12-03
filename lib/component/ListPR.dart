@@ -15,80 +15,73 @@ class _ListPRState extends State<ListPR> {
       itemCount: items.length,
       itemBuilder: (BuildContext context, int index) {
         final item = items[index];
-        return Padding(
-          padding: const EdgeInsets.only(left: 20),
-          child: Container(
-            width: 250,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              border: Border.all(
-                color: Color(0xFFDDE5E9),
-                width: 1,
-              ),
+        return Container(
+          width: 250,
+          margin: EdgeInsets.only(left: 20),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(
+              color: Color(0xFFDDE5E9),
+              width: 1,
             ),
-            child: Column(
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.vertical(
-                    top: Radius.circular(20),
-                  ),
-                  child: Image(
-                    image: item.image,
-                    width: double.infinity,
-                    height: 100,
-                    fit: BoxFit.cover,
-                  ),
+          ),
+          child: Column(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.vertical(
+                  top: Radius.circular(20),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              item.title,
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                            Text(item.subtitle),
-                          ],
-                        ),
-                      ),
-                      Container(
-                          child: Row(
+                child: Image(
+                  image: item.image,
+                  width: double.infinity,
+                  height: 100,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(15),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Icon(
-                            Icons.star,
-                            size: 15,
-                            color: Colors.amber,
+                          Text(
+                            item.title,
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
-                          Icon(
-                            Icons.star,
-                            size: 15,
-                            color: Colors.amber,
-                          ),
-                          Icon(
-                            Icons.star,
-                            size: 15,
-                            color: Colors.amber,
-                          ),
-                          Icon(
-                            Icons.star,
-                            size: 15,
-                            color: Colors.grey,
-                          ),
-                          Text('${item.start}'),
+                          Text(item.subtitle),
                         ],
-                      )),
-                    ],
-                  ),
-                )
-              ],
-            ),
+                      ),
+                    ),
+                    Icon(
+                      Icons.star,
+                      size: 15,
+                      color: Colors.amber,
+                    ),
+                    Icon(
+                      Icons.star,
+                      size: 15,
+                      color: Colors.amber,
+                    ),
+                    Icon(
+                      Icons.star,
+                      size: 15,
+                      color: Colors.amber,
+                    ),
+                    Icon(
+                      Icons.star,
+                      size: 15,
+                      color: Colors.grey,
+                    ),
+                    Text('${item.start}'),
+                  ],
+                ),
+              )
+            ],
           ),
         );
       },

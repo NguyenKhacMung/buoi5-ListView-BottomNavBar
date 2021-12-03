@@ -78,7 +78,7 @@ class _MyOrderState extends State<MyOrder> {
                           child: Image(
                             image: item.image,
                             width: 80,
-                            height: double.infinity,
+                            height: 80,
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -112,24 +112,19 @@ class _MyOrderState extends State<MyOrder> {
                               ),
                               Text(item.subtitle),
                               Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Container(
-                                      child: Row(
-                                    children: [
-                                      Image.asset(
-                                        "images/spicy.png",
-                                        height: 15,
-                                        width: 15,
-                                        fit: BoxFit.cover,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Text(item.spicy),
-                                    ],
-                                  )),
+                                  Image.asset(
+                                    "images/spicy.png",
+                                    height: 15,
+                                    width: 15,
+                                    fit: BoxFit.cover,
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Expanded(
+                                    child: Text(item.spicy),
+                                  ),
                                   Text(
                                     item.order,
                                     style: TextStyle(

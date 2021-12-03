@@ -32,7 +32,7 @@ class _ListNPState extends State<ListNP> {
               child: Image(
                 image: items.image,
                 width: 50,
-                height: double.infinity,
+                height: 50,
                 fit: BoxFit.cover,
               ),
             ),
