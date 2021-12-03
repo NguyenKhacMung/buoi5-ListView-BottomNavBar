@@ -191,7 +191,7 @@ class _WelcomeState extends State<Welcome> {
                 height: 15,
               ),
               Container(
-                height: 170,
+                height: 180,
                 child: ListPR(),
               ),
             ],

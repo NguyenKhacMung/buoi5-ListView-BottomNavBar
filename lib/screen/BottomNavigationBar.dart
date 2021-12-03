@@ -44,6 +44,7 @@ class _BottomTabState extends State<BottomTab> {
         onPageChanged: _onItemTapped,
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
@@ -71,9 +72,8 @@ class _BottomTabState extends State<BottomTab> {
         currentIndex: _selectedIndex,
         selectedItemColor: Color(0xfffd8564),
         unselectedItemColor: Color(0xFFBFBFBF),
-        unselectedLabelStyle: TextStyle(
-          color: Colors.black,
-        ),
+        selectedLabelStyle: TextStyle(color: Color(0xfffd8564)),
+        unselectedLabelStyle: TextStyle(color: Colors.black),
         onTap: onTabTapped,
       ),
     );
